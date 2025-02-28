@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Shopping Cart</h1>
+
+        <!-- Product List -->
+        <div id="products">
+            <div class="product-card">
+                <img src="laptop-1205256_640.jpg" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>$1000</p>
+                <button class="btn" onclick="addToCart(1, 'Laptop', 1000, 'laptop-1205256_640.jpg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="phone.webp" alt="Phone">
+                <h3>Phone</h3>
+                <p>$500</p>
+                <button class="btn" onclick="addToCart(2, 'Phone', 500, 'phone.webp')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="headphone.avif" alt="Headphones">
+                <h3>Headphones</h3>
+                <p>$200</p>
+                <button class="btn" onclick="addToCart(3, 'Headphones', 200, 'headphone.avif')">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cart Display -->
+        <h2>🛍️ Your Cart</h2>
+        <div id="cart-container">
+            <ul id="cart"></ul>
+        </div>
+
+        <div class="summary">
+            <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
+            <p><strong>Average Price:</strong> $<span id="averagePrice">0</span></p>
+        </div>
+
+        <!-- Cart Actions -->
+        <div class="buttons">
+            <button class="btn primary" onclick="sortCart('asc')">Sort by Price (Low to High)</button>
+            <button class="btn primary" onclick="sortCart('desc')">Sort by Price (High to Low)</button>
+            <button class="btn danger" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
