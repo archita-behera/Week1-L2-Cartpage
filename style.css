@@ -106,7 +106,9 @@ body {
         align-items: center;
     }
     
-  
+    .product-card {
+        width: 100%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
