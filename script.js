@@ -1,4 +1,30 @@
 let cart = [];
+
+const products = [
+    { id: 1, name: "Laptop", price: 1000, image: "iphone-1852901_640.jpg" },
+    { id: 2, name: "Phone", price: 500, image: "phone.webp" },
+    { id: 3, name: "Headphones", price: 200, image: "headphone.avif" },
+  
+
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    let productsContainer = document.getElementById("products");
+
+    products.forEach(product => {
+        let productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>$${product.price}</p>
+            <button class="btn" onclick="addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
+        `;
+        productsContainer.appendChild(productCard);
+    });
+});
+
+
 function updateCart() {
     let cartList = document.getElementById("cart");
     let totalPriceSpan = document.getElementById("totalPrice");
