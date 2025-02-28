@@ -9,8 +9,6 @@
 <body>
     <div class="container">
         <h1>🛒 Shopping Cart</h1>
-
-        <!-- Product List -->
         <div id="products">
             <div class="product-card">
                 <img src="laptop-1205256_640.jpg" alt="Laptop">
@@ -31,8 +29,6 @@
                 <button class="btn" onclick="addToCart(3, 'Headphones', 200, 'headphone.avif')">Add to Cart</button>
             </div>
         </div>
-
-        <!-- Cart Display -->
         <h2>🛍️ Your Cart</h2>
         <div id="cart-container">
             <ul id="cart"></ul>
@@ -42,8 +38,6 @@
             <p><strong>Total Price:</strong> $<span id="totalPrice">0</span></p>
             <p><strong>Average Price:</strong> $<span id="averagePrice">0</span></p>
         </div>
-
-        <!-- Cart Actions -->
         <div class="buttons">
             <button class="btn primary" onclick="sortCart('asc')">Sort by Price (Low to High)</button>
             <button class="btn primary" onclick="sortCart('desc')">Sort by Price (High to Low)</button>
